@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>index</title>
+    <link rel="stylesheet" href="/css/style.css"/>    
+</head>
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p> {{content}}</p>
+        <form>
+            <div>
+                <input placeholder="location">
+                <button>Search</button>
+            </div>            
+            <p id="result-1"></p>
+            <p></p>
+        </form>
+    </div>
+    {{>footer}}    
+    <script src="/js/index.js"></script>
+</body>
