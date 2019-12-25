@@ -5,8 +5,9 @@ const geoCode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
+const port = process.env.PORT || 3000
 
-console.log(__dirname)
+//console.log(__dirname)
 const publicDirectory = path.join(__dirname,"../public")
 const viewPath = path.join(__dirname,"../templates/views")
 const partialPath = path.join(__dirname,'../templates/partials')
@@ -91,6 +92,6 @@ app.get('/weather/*',(req,res)=>{
 app.get('*',(req,res)=>{
     res.send('Resource not found')
 })
-app.listen('3000',()=>{
-    console.log('server started')
+app.listen(port,()=>{
+    console.log('server started at '+port)
 })
